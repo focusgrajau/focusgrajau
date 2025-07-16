@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<title>Área do Aluno – Centro Educacional FOCUS</title>
-<style>
+  <meta charset="utf-8"/>
+  <title>Área do Aluno – Centro Educacional FOCUS</title>
+  <style>
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #1A1F50;
@@ -52,54 +51,92 @@
   </style>
 </head>
 <body>
-<h1>Área do Aluno</h1>
-<form onsubmit="return validarAcesso(event)">
-<input id="nome" placeholder="Nome completo" required="" type="text"/>
-<input id="matricula" placeholder="Matrícula" required="" type="text"/>
-<button type="submit">Entrar</button>
-</form>
-<div class="content" id="conteudo-enfermagem">
-<h2>Bem-vindo(a), aluno(a) de Técnico em Enfermagem!</h2>
-<a href="https://drive.google.com/drive/folders/1CjhKodlRWq5VRwS-owFlhXF-TtQai0nX?usp=sharing" target="_blank">📂 Acessar Material da Turma</a>
-<h3>📢 Últimos Avisos</h3>
-<ul><li>Data de pagamento do jaleco: 31 de agosto</li><li>Pagamento do fotógrafo: 30 de setembro</li><li>Prestação de conta da rifa: 04 de outubro</li><li>Data da cerimônia do jaleco: 25 de outubro</li></ul>
-<h3>🗓️ Calendário de Aulas</h3>
-<ul><li>Agosto: dias 09, 23</li><li>Setembro: dias 06, 20</li><li>Outubro: dias 04, 18</li><li>Novembro: dias 08, 22</li><li>Dezembro: dias 06, 13</li></ul>
+  <h1>Área do Aluno</h1>
 
+  <form onsubmit="return validarAcesso(event)">
+    <input id="nome" placeholder="Nome completo" required type="text" />
+    <input id="matricula" placeholder="Matrícula" required type="text" />
+    <button type="submit">Entrar</button>
+  </form>
 
-<h3>📞 Contato da Coordenação</h3>
-<p>Whatsapp: <a href="https://wa.me/5599984450240" style="color: #F9C041;">(99) 98445-0240</a></p>
-</div>
-<div class="content" id="conteudo-farmacia">
-<h2>Bem-vindo(a), aluno(a) de Técnico em Farmácia!</h2>
-<a href="https://drive.google.com/drive/folders/1jkWKCR-DEhdk3YCrnepBJbnHRi73eIrJ?usp=sharing" target="_blank">📂 Acessar Material da Turma</a>
-<h3>📢 Últimos Avisos</h3>
-<ul><li>Data de pagamento do jaleco: 31 de agosto</li><li>Pagamento do fotógrafo: 30 de setembro</li><li>Prestação de conta da rifa: 04 de outubro</li><li>Data da cerimônia do jaleco: 25 de outubro</li></ul>
-<h3>🗓️ Calendário de Aulas</h3>
-<ul><li>Agosto: dias 09, 23</li><li>Setembro: dias 06, 20</li><li>Outubro: dias 04, 18</li><li>Novembro: dias 08, 22</li><li>Dezembro: dias 06, 13</li></ul>
+  <!-- Conteúdo Enfermagem -->
+  <div class="content" id="conteudo-enfermagem">
+    <h2>Bem-vindo(a), aluno(a) de Técnico em Enfermagem!</h2>
+    <a href="https://drive.google.com/drive/folders/1CjhKodlRWq5VRwS-owFlhXF-TtQai0nX?usp=sharing" target="_blank">📂 Acessar Material da Turma</a>
 
+    <h3>📢 Últimos Avisos</h3>
+    <ul>
+      <li>Data de pagamento do jaleco: 31 de agosto</li>
+      <li>Pagamento do fotógrafo: 30 de setembro</li>
+      <li>Prestação de conta da rifa: 04 de outubro</li>
+      <li>Data da cerimônia do jaleco: 25 de outubro</li>
+    </ul>
 
-<h3>📞 Contato da Coordenação</h3>
-<p>Whatsapp: <a href="https://wa.me/5599984450240" style="color: #F9C041;">(99) 98445-0240</a></p>
-</div>
-<script>
+    <h3>🗓️ Calendário de Aulas</h3>
+    <ul>
+      <li>Agosto: dias 09, 23</li>
+      <li>Setembro: dias 06, 20</li>
+      <li>Outubro: dias 04, 18</li>
+      <li>Novembro: dias 08, 22</li>
+      <li>Dezembro: dias 06, 13</li>
+    </ul>
+
+    <h3>📞 Contato da Coordenação</h3>
+    <p>Whatsapp: <a href="https://wa.me/5599984450240">(99) 98445-0240</a></p>
+  </div>
+
+  <!-- Conteúdo Farmácia -->
+  <div class="content" id="conteudo-farmacia">
+    <h2>Bem-vindo(a), aluno(a) de Técnico em Farmácia!</h2>
+    <a href="https://drive.google.com/drive/folders/1jkWKCR-DEhdk3YCrnepBJbnHRi73eIrJ?usp=sharing" target="_blank">📂 Acessar Material da Turma</a>
+
+    <h3>📢 Últimos Avisos</h3>
+    <ul>
+      <li>Data de pagamento do jaleco: 31 de agosto</li>
+      <li>Pagamento do fotógrafo: 30 de setembro</li>
+      <li>Prestação de conta da rifa: 04 de outubro</li>
+      <li>Data da cerimônia do jaleco: 25 de outubro</li>
+    </ul>
+
+    <h3>🗓️ Calendário de Aulas</h3>
+    <ul>
+      <li>Agosto: dias 09, 23</li>
+      <li>Setembro: dias 06, 20</li>
+      <li>Outubro: dias 04, 18</li>
+      <li>Novembro: dias 08, 22</li>
+      <li>Dezembro: dias 06, 13</li>
+    </ul>
+
+    <h3>📞 Contato da Coordenação</h3>
+    <p>Whatsapp: <a href="https://wa.me/5599984450240">(99) 98445-0240</a></p>
+  </div>
+
+  <script>
     const alunos = {
-      "ENF-F-2024-24001": "Alaine Cruz D Silva",
-      "ENF-F-2024-24002": "Ana Clara Gomes da Silva",
-      "ENF-F-2024-24003": "Andreia Rodrigues dos Santos Chaves",
-      "ENF-F-2024-24004": "Edineide Reis Torres",
-      "ENF-F-2024-24005": "Gabriel Aristotelis Juá Goias",
-      "ENF-F-2024-24006": "Geovana Sousa Vianna",
-      "ENF-F-2024-24007": "Lucas Alves dos Santos Silva",
-      "ENF-F-2024-24008": "Luciana Santos Silva",
-      "ENF-F-2024-24009": "Maria Kauanny Monteiro Braga",
-      "ENF-F-2024-24010": "Maria Raimunda Pereira de Brito Araújo",
-      "ENF-F-2024-24011": "Nilton Oliveiro Sousa Guajajara",
-      "ENF-F-2024-24012": "Orleanes Filomeno da Silva",
-      "ENF-F-2024-24013": "Raiana Gomes Bandeira Ferreira",
-      "ENF-F-2024-24014": "Roseane Alves Martins Borges",
-      "ENF-F-2024-24015": "Silvana Lima Sousa de Oliveira",
-      "ENF-F-2024-24016": "Wellen Hyorrana Sousa Barbosa",
+      // Enfermagem
+      "ENF-F-2024-24001": "Aline Oliveira da Silva",
+      "ENF-F-2024-24002": "Ana Paula Silva Costa",
+      "ENF-F-2024-24003": "Carlos Souza Martins",
+      "ENF-F-2024-24004": "Fernanda Lima Rocha",
+      "ENF-F-2024-24005": "Gabriela Souza Vieira",
+      "ENF-F-2024-24006": "João Pedro Carvalho",
+      "ENF-F-2024-24007": "Juliana Costa Souza",
+      "ENF-F-2024-24008": "Larissa Martins",
+      "ENF-F-2024-24009": "Lucas Silva Rocha",
+      "ENF-F-2024-24010": "Mariana Souza",
+      "ENF-F-2024-24017": "Daiane Barros Miranda Lima",
+      "ENF-F-2024-24018": "Damaris de Sá Ribeiro",
+      "ENF-F-2024-24019": "Daniele Ingride Sales de Sousa",
+      "ENF-F-2024-24020": "Denise Martins Santana Guajajara",
+      "ENF-F-2024-24021": "Jaqueline Silva Feitosa",
+      "ENF-F-2024-24022": "Josielma Rodrigues de Sousa Silva",
+      "ENF-F-2024-24023": "Maria José da Conceição Silva",
+      "ENF-F-2024-24024": "Rildomar Mourão de Albuquerque",
+      "ENF-F-2024-24025": "Valderlanes Sobral da Silva",
+      "ENF-F-2024-24026": "Vitória Oliveira Ferreira",
+      "ENF-F-2024-24027": "Wannessa Oliveira Ferreira",
+
+      // Farmácia
       "FAR-M-2025-24001": "Gleciane Souza",
       "FAR-M-2025-24002": "Beatriz Rodrigues"
     };
@@ -119,32 +156,7 @@
       } else {
         alert("Nome ou matrícula inválidos.");
       }
-      return false;
     }
-  
-const alunosEnfermagem = [
-    ["Aline Oliveira da Silva", "ENF-F-2024-24001"],
-    ["Ana Paula Silva Costa", "ENF-F-2024-24002"],
-    ["Carlos Souza Martins", "ENF-F-2024-24003"],
-    ["Fernanda Lima Rocha", "ENF-F-2024-24004"],
-    ["Gabriela Souza Vieira", "ENF-F-2024-24005"],
-    ["João Pedro Carvalho", "ENF-F-2024-24006"],
-    ["Juliana Costa Souza", "ENF-F-2024-24007"],
-    ["Larissa Martins", "ENF-F-2024-24008"],
-    ["Lucas Silva Rocha", "ENF-F-2024-24009"],
-    ["Mariana Souza", "ENF-F-2024-24010"],
-    ["Daiane Barros Miranda Lima", "ENF-F-2024-24017"],
-    ["Damaris de Sá Ribeiro", "ENF-F-2024-24018"],
-    ["Daniele Ingride Sales de Sousa", "ENF-F-2024-24019"],
-    ["Denise Martins Santana Guajajara", "ENF-F-2024-24020"],
-    ["Jaqueline Silva Feitosa", "ENF-F-2024-24021"],
-    ["Josielma Rodrigues de Sousa Silva", "ENF-F-2024-24022"],
-    ["Maria José da Conceição Silva", "ENF-F-2024-24023"],
-    ["Rildomar Mourão de Albuquerque", "ENF-F-2024-24024"],
-    ["Valderlanes Sobral da Silva", "ENF-F-2024-24025"],
-    ["Vitória Oliveira Ferreira", "ENF-F-2024-24026"],
-    ["Wannessa Oliveira Ferreira", "ENF-F-2024-24027"]
-];
-</script>
+  </script>
 </body>
 </html>
