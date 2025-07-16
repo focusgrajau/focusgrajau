@@ -6,6 +6,15 @@
   <title>Centro Educacional FOCUS</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --cor-fundo: #0D1B2A;
+      --cor-secundaria: #1B263B;
+      --cor-destaque: #FFC857;
+      --cor-clara: #ffffff;
+      --cor-texto: #f1f1f1;
+      --cor-botao-matricula: #EF476F;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,8 +22,8 @@
     }
 
     body {
-      background-color: #1A1F50;
-      color: #FFFFFF;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
       font-family: 'Poppins', sans-serif;
       line-height: 1.6;
       padding: 40px 20px;
@@ -33,18 +42,18 @@
     .logo {
       max-width: 120px;
       margin-bottom: 15px;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
     }
 
     h1 {
       font-size: 2.8em;
-      color: #F9C041;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      color: var(--cor-destaque);
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
     }
 
     .botao-matricula {
       display: inline-block;
-      background-color: #FF4C4C;
+      background-color: var(--cor-botao-matricula);
       color: white;
       text-decoration: none;
       padding: 14px 28px;
@@ -57,7 +66,7 @@
     }
 
     .botao-matricula:hover {
-      background-color: #e64343;
+      background-color: #d43e62;
       transform: scale(1.03);
     }
 
@@ -71,32 +80,32 @@
     }
 
     .link-botao {
-      background-color: #F9C041;
-      color: #1A1F50;
+      background-color: var(--cor-destaque);
+      color: var(--cor-fundo);
       text-decoration: none;
       padding: 12px 20px;
       border-radius: 10px;
       font-weight: bold;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
     }
 
     .link-botao:hover {
-      background-color: #e0aa32;
+      background-color: #e6b84a;
       transform: translateY(-2px);
     }
 
     section {
-      background-color: #232866;
+      background-color: var(--cor-secundaria);
       padding: 30px;
       border-radius: 16px;
       margin-bottom: 40px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
 
     section h2 {
       font-size: 1.8em;
-      color: #F9C041;
+      color: var(--cor-destaque);
       margin-bottom: 20px;
     }
 
@@ -114,10 +123,9 @@
     }
 
     strong {
-      color: #F9C041;
+      color: var(--cor-destaque);
     }
 
-    /* Botões flutuantes */
     .floating-buttons {
       position: fixed;
       bottom: 20px;
@@ -132,13 +140,13 @@
       width: 55px;
       height: 55px;
       border-radius: 50%;
-      background-color: #F9C041;
+      background-color: var(--cor-destaque);
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s, background-color 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
     }
 
     .floating-button:hover {
@@ -180,21 +188,20 @@
 
     <div class="links">
       <a class="link-botao" href="alunos.html">🔐 Área do Aluno</a>
-      <a class="link-botao" href="inscricao.html">📝 Formulário de Inscrição</a>
       <a class="link-botao" href="eventos.html">🎓 Eventos</a>
     </div>
 
     <section>
       <h2>🏫 Sobre Nós</h2>
-      <p>Comemorando 7 anos de história em Grajaú (MA), o Centro Educacional Focus é uma instituição comprometida com a formação profissional de qualidade. Nestes anos de atuação, temos contribuído diretamente para o crescimento pessoal e profissional de centenas de alunos, oferecendo uma educação acessível, prática e alinhada com as demandas do mercado de trabalho.</p>
-      <p>Nosso compromisso é transformar vidas por meio do ensino técnico, preparando nossos alunos para atuarem com excelência em suas respectivas áreas, com ética, responsabilidade e competência.</p>
+      <p>Comemorando 7 anos de história em Grajaú (MA), o Centro Educacional Focus é uma instituição comprometida com a formação profissional de qualidade.</p>
+      <p>Temos contribuído diretamente para o crescimento pessoal e profissional de centenas de alunos, oferecendo uma educação acessível, prática e alinhada com o mercado de trabalho.</p>
     </section>
 
     <section>
       <h2>📘 Cursos Disponíveis</h2>
       <ul>
-        <li><strong>✅ Técnico em Enfermagem:</strong> Capacita o aluno para atuar em hospitais, clínicas, postos de saúde, unidades de pronto atendimento e instituições de longa permanência. A formação abrange aulas teóricas, práticas e estágio supervisionado, desenvolvendo habilidades técnicas, humanizadas e éticas essenciais para o cuidado com o paciente.</li>
-        <li><strong>✅ Técnico em Farmácia:</strong> Prepara o estudante para atuar em farmácias, drogarias, laboratórios, distribuidoras de medicamentos, hospitais e indústrias farmacêuticas. O curso aborda conhecimentos sobre farmacologia, controle de qualidade, atendimento ao cliente, dispensação e manipulação de medicamentos.</li>
+        <li><strong>✅ Técnico em Enfermagem:</strong> Capacita o aluno para atuar em hospitais, clínicas, postos de saúde e instituições de longa permanência. A formação abrange aulas teóricas, práticas e estágio supervisionado.</li>
+        <li><strong>✅ Técnico em Farmácia:</strong> Prepara o estudante para atuar em farmácias, drogarias, laboratórios, hospitais e indústrias farmacêuticas. O curso aborda farmacologia, controle de qualidade, atendimento ao cliente e manipulação de medicamentos.</li>
       </ul>
     </section>
   </div>
@@ -203,17 +210,17 @@
   <div class="floating-buttons">
     <a href="https://www.instagram.com/focusgrajau?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="floating-button insta" target="_blank" aria-label="Instagram">
       <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
-        <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.3 1 .7 1.5 1.2.5.5.9.9 1.2 1.5.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.3.6-.7 1-1.2 1.5-.5.5-.9.9-1.5 1.2-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.3-1-.7-1.5-1.2-.5-.5-.9-.9-1.2-1.5-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.3-.6.7-1 1.2-1.5.5-.5.9-.9 1.5-1.2.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 .1 5.6.2 4.6.5 3.8.9 2.9 1.3 2.1 2 1.3 2.8.5 3.6-.2 4.5-.6 5.3c-.4.8-.7 1.8-.8 3.2C-.1 9.3 0 9.7 0 12s0 2.7.1 3.9c.1 1.4.4 2.4.8 3.2.4.8 1.1 1.7 1.9 2.5.8.8 1.7 1.4 2.5 1.9.8.4 1.8.7 3.2.8 1.2.1 1.6.1 3.9.1s2.7 0 3.9-.1c1.4-.1 2.4-.4 3.2-.8.8-.4 1.7-1.1 2.5-1.9.8-.8 1.4-1.7 1.9-2.5.4-.8.7-1.8.8-3.2.1-1.2.1-1.6.1-3.9s0-2.7-.1-3.9c-.1-1.4-.4-2.4-.8-3.2-.4-.8-1.1-1.7-1.9-2.5-.8-.8-1.7-1.4-2.5-1.9-.8-.4-1.8-.7-3.2-.8C15.3.1 14.9 0 12 0z"/>
-        <path d="M12 5.8A6.2 6.2 0 1 0 12 18.2 6.2 6.2 0 1 0 12 5.8zm0 10.2A4 4 0 1 1 12 8a4 4 0 0 1 0 8.1zM18.4 4.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/>
+        <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.3 1 .7 1.5 1.2.5.5.9.9 1.2 1.5.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.3.6-.7 1-1.2 1.5-.5.5-.9.9-1.5 1.2-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.3-1-.7-1.5-1.2-.5-.5-.9-.9-1.2-1.5-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.3-.6.7-1 1.2-1.5.5-.5.9-.9 1.5-1.2.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zM12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm6.4-1.2a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/>
       </svg>
     </a>
 
     <a href="https://wa.me/5599984450240" class="floating-button whatsapp" target="_blank" aria-label="WhatsApp">
       <svg width="24" height="24" fill="white" viewBox="0 0 32 32">
-        <path d="M16.004 2.007a13.94 13.94 0 00-11.03 22.217L2 30l5.918-2.931a13.94 13.94 0 008.086 2.473h.001c7.718 0 13.995-6.276 13.995-13.993 0-3.737-1.456-7.25-4.101-9.894a13.94 13.94 0 00-9.895-4.105zm0 25.41a11.41 11.41 0 01-6.084-1.745l-.437-.261-3.512 1.741.699-3.62-.236-.449A11.43 11.43 0 1116.004 27.42zm6.265-8.548c-.342-.171-2.02-.997-2.335-1.112-.313-.115-.542-.171-.771.171-.228.342-.885 1.112-1.086 1.34-.2.228-.4.257-.742.086-.342-.171-1.447-.533-2.754-1.702-1.018-.909-1.704-2.028-1.902-2.37-.199-.342-.021-.526.15-.697.154-.154.342-.4.513-.6.171-.2.228-.342.342-.57.114-.228.057-.428-.028-.599-.086-.171-.771-1.857-1.057-2.548-.278-.665-.56-.571-.771-.582-.2-.008-.428-.01-.656-.01a1.26 1.26 0 00-.899.42c-.313.342-1.2 1.17-1.2 2.856s1.229 3.312 1.4 3.545c.171.228 2.4 3.652 5.818 5.117.814.352 1.45.561 1.946.717.818.26 1.562.223 2.15.135.656-.097 2.02-.826 2.307-1.624.285-.798.285-1.482.2-1.624-.085-.143-.314-.228-.656-.4z"/>
+        <path d="M16.004 2.007a13.94 13.94 0 00-11.03 22.217L2 30l5.918-2.931a13.94 13.94 0 008.086 2.473h.001c7.718 0 13.995-6.276 13.995-13.993 0-3.737-1.456-7.25-4.101-9.894a13.94 13.94 0 00-9.895-4.105zM16.004 27.42a11.41 11.41 0 01-6.084-1.745l-.437-.261-3.512 1.741.699-3.62-.236-.449a11.43 11.43 0 1110.57 4.334z"/>
       </svg>
     </a>
   </div>
 </body>
 </html>
+
 
