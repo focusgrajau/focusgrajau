@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrícula – Centro Educacional FOCUS</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1A1F50;
+      color: white;
+      padding: 40px 20px;
+    }
+    h1 {
+      color: #F9C041;
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #22356C;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #F9C041;
+      border: none;
+      color: #1A1F50;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function enviarWhatsApp(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const email = document.getElementById('email').value;
+      const curso = document.getElementById('curso').value;
+      const modalidade = document.getElementById('modalidade').value;
+      const mensagem = document.getElementById('mensagem').value;
+
+      const texto = `*Nova Inscrição Focus:*
+*Nome:* ${nome}
+*Telefone:* ${telefone}
+*Email:* ${email}
+*Curso:* ${curso}
+*Modalidade:* ${modalidade}
+*Mensagem:* ${mensagem}`;
+
+      const numero = '5599984450240';
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <h1>Formulário de Matrícula</h1>
+  <form onsubmit="enviarWhatsApp(event)">
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" required>
+
+    <label for="telefone">Telefone / WhatsApp:</label>
+    <input type="tel" id="telefone" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" required>
+
+    <label for="curso">Curso de Interesse:</label>
+    <select id="curso" required>
+      <option value="">Selecione</option>
+      <option value="TECNICO EM ENFERMAGEM">TÉCNICO EM ENFERMAGEM</option>
+      <option value="TECNICO EM FARMACIA">TÉCNICO EM FARMÁCIA</option>
+    </select>
+
+    <label for="modalidade">Preferência de dias de aula:</label>
+<select id="modalidade" required>
+  <option value="">Selecione</option>
+  <option value="SÁBADOS (QUINZENAIS)">SÁBADOS (QUINZENAIS)</option>
+  <option value="SEMANAIS (DUAS VEZES POR SEMANA)">SEMANAIS (DUAS VEZES POR SEMANA)</option>
+</select>
+
+    <label for="mensagem">Mensagem (opcional):</label>
+    <textarea id="mensagem" rows="4"></textarea>
+
+    <button type="submit">Enviar para o WhatsApp</button>
+  </form>
+</body>
+</html>
