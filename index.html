@@ -2,40 +2,108 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Centro Educacional FOCUS</title>
   <style>
     body {
       background-color: #1A1F50;
-      color: white;
+      color: #FFFFFF;
       font-family: 'Poppins', sans-serif;
       text-align: center;
       padding: 60px 20px;
+      margin: 0;
     }
-    h1 {
-      color: #F9C041;
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-bottom: 40px;
     }
-    a {
-      display: block;
-      margin: 15px auto;
-      width: fit-content;
+
+    .logo {
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: #F9C041;
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .link-botao {
+      display: inline-block;
+      margin: 15px;
       padding: 12px 25px;
       background-color: #F9C041;
       color: #1A1F50;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
+      transition: background-color 0.3s;
     }
-    a:hover {
+
+    .link-botao:hover {
       background-color: #e0aa32;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 60px auto 0;
+      text-align: left;
+      background-color: #232866;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    section h2 {
+      color: #F9C041;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Centro Educacional FOCUS</h1>
-  <a href="alunos.html">🔐 Área do Aluno</a>
-  <a href="inscricao.html">📝 Formulário de Inscrição</a>
-  <a href="eventos.html">🎓 Eventos</a>
-  <a href="galeria.html">📷 Galeria do Aluno</a>
+
+  <header>
+    <img src="logo-focus.png" alt="Logo do Centro Educacional FOCUS" class="logo">
+    <h1>Centro Educacional FOCUS</h1>
+  </header>
+
+  <a class="link-botao" href="alunos.html">🔐 Área do Aluno</a>
+  <a class="link-botao" href="inscricao.html">📝 Formulário de Inscrição</a>
+  <a class="link-botao" href="eventos.html">🎓 Eventos</a>
+  <a class="link-botao" href="galeria.html">📷 Galeria do Aluno</a>
+
+  <!-- Seção Sobre Nós -->
+  <section>
+    <h2>🏫 Sobre Nós</h2>
+    <p>Comemorando 7 anos de história em Grajaú (MA), o Centro Educacional Focus é uma instituição comprometida com a formação profissional de qualidade. Nestes anos de atuação, temos contribuído diretamente para o crescimento pessoal e profissional de centenas de alunos, oferecendo uma educação acessível, prática e alinhada com as demandas do mercado de trabalho.</p>
+    <p>Nosso compromisso é transformar vidas por meio do ensino técnico, preparando nossos alunos para atuarem com excelência em suas respectivas áreas, com ética, responsabilidade e competência.</p>
+  </section>
+
+  <!-- Seção Cursos Disponíveis -->
+  <section>
+    <h2>📘 Cursos Disponíveis</h2>
+    <ul>
+      <li><strong>✅ Técnico em Enfermagem:</strong> Capacita o aluno para atuar em hospitais, clínicas, postos de saúde, unidades de pronto atendimento e instituições de longa permanência. A formação abrange aulas teóricas, práticas e estágio supervisionado, desenvolvendo habilidades técnicas, humanizadas e éticas essenciais para o cuidado com o paciente.</li>
+      <li><strong>✅ Técnico em Farmácia:</strong> Prepara o estudante para atuar em farmácias, drogarias, laboratórios, distribuidoras de medicamentos, hospitais e indústrias farmacêuticas. O curso aborda conhecimentos sobre farmacologia, controle de qualidade, atendimento ao cliente, dispensação e manipulação de medicamentos.</li>
+    </ul>
+  </section>
+
 </body>
 </html>
