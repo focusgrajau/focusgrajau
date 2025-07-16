@@ -1,93 +1,122 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<title>Eventos – Centro Educacional FOCUS</title>
-<style>
+  <meta charset="UTF-8">
+  <title>EVENTOS ABERTOS</title>
+  <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #1A1F50;
-      color: white;
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    h1 {
-      color: #F9C041;
+      font-family: Arial, sans-serif;
       text-align: center;
+      padding: 30px;
     }
-    h2, h3 {
-      color: #F9C041;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
-    p, li {
-      line-height: 1.6;
-      font-size: 1.1em;
+
+    /* Estilo do modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background-color: rgba(0, 0, 0, 0.8);
     }
-    .whatsapp-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #25D366;
-      color: white;
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
       font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1em;
+      cursor: pointer;
     }
-    .whatsapp-btn:hover {
-      background-color: #1ebe5d;
+
+    .close:hover {
+      color: red;
+    }
+
+    .modal-content p {
+      margin: 10px 0;
+    }
+
+    strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-<h1>I Simpósio FOCUS de Práticas em Saúde</h1>
-<p><strong>📍 Local:</strong> Escola José Rodrigues da Costa</p>
-<p><strong>🗓️ Datas:</strong> 30 e 31 de agosto (sábado e domingo)</p>
-<p><strong>⏳ Carga Horária Total:</strong> 30 horas</p>
-<h2>🔹 SÁBADO – 30/08</h2>
-<h3>🕘 Manhã</h3>
-<ul>
-<li>Cerimônia de Abertura</li>
-<li>Apresentação de Trabalhos Acadêmicos</li>
-</ul>
-<h3>🕓 Tarde (14h às 18h)</h3>
-<ul>
-<li>🩺 Minicurso 1: Prática Clínica dos Sinais Vitais: Técnicas e Interpretação</li>
 
-</ul>
-<h2>🔹 DOMINGO – 31/08</h2>
-<h3>🕘 Manhã</h3>
-<ul>
-<li>🧪 Minicurso 2: Testes Rápidos na Atenção à Saúde: Prática e Cuidados</li>
+  <h1>EVENTOS ABERTOS</h1>
 
-</ul>
-<h3>🕓 Tarde</h3>
-<ul>
-<li>❤️ Minicurso 3: RCP na Prática: Salvando Vidas com Técnica e Agilidade</li>
+  <!-- Imagem que abre o modal -->
+  <img src="sua-imagem.jpg" alt="Banner do Evento" id="openModal">
 
-</ul>
-<h3>🔚 Encerramento Oficial</h3>
-<h2>💰 Investimento</h2>
-<ul>
-<li><strong>Aluno FOCUS:</strong> R$ 30,00 (mediante envio do nome e matrícula)</li>
-<li><strong>Participante Externo:</strong> R$ 60,00</li>
-</ul>
-<p><strong>📌 Inscrições em breve!</strong></p>
-<p>🎓 Um fim de semana de aprendizado, prática e transformação na saúde!</p>
-<a class="whatsapp-btn" href="https://wa.me/5599984450240?text=Olá! Quero me inscrever no I Simpósio FOCUS. Meu nome é ________ e minha matrícula é ________." target="_blank">
-    📲 Fazer Inscrição com Desconto (Aluno FOCUS)
-  </a>
+  <!-- Modal com informações -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <strong>I Simpósio FOCUS de Práticas em Saúde</strong>
+      <p>📍 <strong>Local:</strong> Escola José Rodrigues da Costa</p>
+      <p>🗓️ <strong>Datas:</strong> 30 e 31 de agosto (sábado e domingo)</p>
+      <p>⏳ <strong>Carga Horária Total:</strong> 30 horas</p>
 
-<div style="text-align: center; margin-top: 40px;">
-  <h2 style="color: #F9C041;">I Simpósio Focus de Práticas em Saúde</h2>
-  <img src="I SIMPOSIO FOCUS.png" alt="I Simpósio Focus" style="max-width: 300px; cursor: pointer;" onclick="document.getElementById('info-simposio').style.display='block'">
-  <div id="info-simposio" style="display: none; margin-top: 20px; background-color: #22356C; padding: 20px; border-radius: 10px;">
-    <p><strong>📅 Dias:</strong> 30 e 31 de agosto</p>
-    <p><strong>📍 Local:</strong> Escola José Rodrigues da Costa</p>
-    <p><strong>💰 Valor:</strong> R$ 25 (Aluno FOCUS) / R$ 50 (Aluno Externo)</p>
+      <p><strong>🔹 SÁBADO – 30/08</strong></p>
+      <p>🕘 Manhã<br>Cerimônia de Abertura<br>Apresentação de Trabalhos Acadêmicos</p>
+      <p>🕓 Tarde (14h às 18h)<br>🩺 Minicurso 1: Prática Clínica dos Sinais Vitais: Técnicas e Interpretação</p>
+
+      <p><strong>🔹 DOMINGO – 31/08</strong></p>
+      <p>🕘 Manhã<br>🧪 Minicurso 2: Testes Rápidos na Atenção à Saúde: Prática e Cuidados</p>
+      <p>🕓 Tarde<br>❤️ Minicurso 3: RCP na Prática: Salvando Vidas com Técnica e Agilidade</p>
+      <p>🔚 Encerramento Oficial</p>
+
+      <p><strong>💰 Investimento</strong></p>
+      <p>Aluno FOCUS: R$ 25 (mediante envio do nome e matrícula)<br>
+         Participante Externo: R$ 50</p>
+      <p>📌 Inscrições em breve!</p>
+
+      <p>🎓 Um fim de semana de aprendizado, prática e transformação na saúde!</p>
+    </div>
   </div>
-</div>
+
+  <script>
+    const modal = document.getElementById("infoModal");
+    const img = document.getElementById("openModal");
+    const span = document.getElementsByClassName("close")[0];
+
+    img.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
