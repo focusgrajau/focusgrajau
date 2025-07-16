@@ -3,174 +3,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EVENTOS ABERTOS | Focus Grajaú</title>
+  <title>Centro Educacional FOCUS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
       margin: 0;
       padding: 0;
-      text-align: center;
       color: #333;
+      text-align: center;
     }
 
     header {
       background-color: #003366;
       color: white;
-      padding: 20px 10px;
+      padding: 30px 15px;
+    }
+
+    .logo {
+      max-width: 120px;
+      margin-bottom: 10px;
     }
 
     h1 {
+      font-size: 28px;
       margin: 0;
-      font-size: 28px;
-      letter-spacing: 1px;
     }
 
-    .container {
-      padding: 30px 20px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      cursor: pointer;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-
-    img:hover {
-      transform: scale(1.02);
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow-y: auto;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 30px;
-      width: 90%;
-      max-width: 600px;
-      border-radius: 10px;
-      text-align: left;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      position: relative;
-    }
-
-    .close {
-      color: #555;
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close:hover {
-      color: red;
-    }
-
-    .modal-content p {
-      margin: 12px 0;
-      line-height: 1.5;
-    }
-
-    strong {
-      font-size: 20px;
-      color: #003366;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .btn-whats {
+    .botao-matricula {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 25px;
+      margin: 20px auto;
+      padding: 14px 28px;
       background-color: #25D366;
       color: white;
-      font-weight: bold;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
+      font-weight: bold;
       font-size: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .botao-matricula:hover {
+      background-color: #1ebc57;
+    }
+
+    .links {
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .link-botao {
+      background-color: #003366;
+      color: white;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
       transition: background-color 0.3s ease;
     }
 
-    .btn-whats:hover {
-      background-color: #1ebc57;
+    .link-botao:hover {
+      background-color: #00264d;
+    }
+
+    section {
+      background-color: white;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    section h2 {
+      color: #003366;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    section p, ul {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: #003366;
+    }
+
+    /* Botões flutuantes */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .floating-button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #003366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .floating-button:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-button.whatsapp {
+      background-color: #25D366;
+    }
+
+    .floating-button.instagram {
+      background-color: #E1306C;
+    }
+
+    .floating-button svg {
+      fill: white;
+      width: 24px;
+      height: 24px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>EVENTOS ABERTOS</h1>
+    <img src="logo-focus.png" alt="Logo do Centro Educacional FOCUS" class="logo">
+    <h1>Centro Educacional FOCUS</h1>
+    <a class="botao-matricula" href="inscricao.html">📌 Matrículas Abertas</a>
   </header>
 
-  <div class="container">
-    <!-- Imagem clicável -->
-    <img src="I SIMPOSIO FOCUS.png" alt="Banner do Evento" id="openModal" />
-
-    <!-- Modal com informações -->
-    <div id="infoModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <strong>I Simpósio FOCUS de Práticas em Saúde</strong>
-        <p>📍 <strong>Local:</strong> Escola José Rodrigues da Costa</p>
-        <p>🗓️ <strong>Datas:</strong> 30 e 31 de agosto (sábado e domingo)</p>
-        <p>⏳ <strong>Carga Horária Total:</strong> 30 horas</p>
-
-        <p><strong>🔹 SÁBADO – 30/08</strong></p>
-        <p>🕘 Manhã<br>Cerimônia de Abertura<br>Apresentação de Trabalhos Acadêmicos</p>
-        <p>🕓 Tarde (14h às 18h)<br>🩺 Minicurso 1: Prática Clínica dos Sinais Vitais</p>
-
-        <p><strong>🔹 DOMINGO – 31/08</strong></p>
-        <p>🕘 Manhã<br>🧪 Minicurso 2: Testes Rápidos na Atenção à Saúde</p>
-        <p>🕓 Tarde<br>❤️ Minicurso 3: RCP na Prática</p>
-        <p>🔚 Encerramento Oficial</p>
-
-        <p><strong>💰 Investimento</strong></p>
-        <p>Aluno FOCUS: R$ 25<br>Participante Externo: R$ 50</p>
-        <p>📌 Inscrições em breve!</p>
-
-        <p>🎓 Um fim de semana de aprendizado, prática e transformação na saúde!</p>
-
-        <!-- Botão do WhatsApp -->
-        <a class="btn-whats" href="https://wa.me/5599984450240?text=Olá!%20Gostaria%20de%20me%20inscrever%20no%20Simpósio%20FOCUS" target="_blank">💬 Fazer Inscrição via WhatsApp</a>
-      </div>
-    </div>
+  <div class="links">
+    <a class="link-botao" href="alunos.html">🔐 Área do Aluno</a>
+    <a class="link-botao" href="eventos.html">🎓 Eventos</a>
   </div>
 
-  <script>
-    const modal = document.getElementById("infoModal");
-    const img = document.getElementById("openModal");
-    const span = document.getElementsByClassName("close")[0];
+  <section>
+    <h2>🏫 Sobre Nós</h2>
+    <p>Comemorando 7 anos de história em Grajaú (MA), o Centro Educacional Focus é uma instituição comprometida com a formação profissional de qualidade.</p>
+    <p>Temos contribuído diretamente para o crescimento pessoal e profissional de centenas de alunos, oferecendo uma educação acessível, prática e alinhada com o mercado de trabalho.</p>
+  </section>
 
-    img.onclick = function () {
-      modal.style.display = "block";
-    }
+  <section>
+    <h2>📘 Cursos Disponíveis</h2>
+    <ul>
+      <li><strong>✅ Técnico em Enfermagem:</strong> Capacita o aluno para atuar em hospitais, clínicas, postos de saúde e instituições de longa permanência. A formação abrange aulas teóricas, práticas e estágio supervisionado.</li>
+      <li><strong>✅ Técnico em Farmácia:</strong> Prepara o estudante para atuar em farmácias, drogarias, laboratórios, hospitais e indústrias farmacêuticas. O curso aborda farmacologia, controle de qualidade, atendimento ao cliente e manipulação de medicamentos.</li>
+    </ul>
+  </section>
 
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
+  <!-- Botões flutuantes -->
+  <div class="floating-buttons">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5599984450240" class="floating-button whatsapp" target="_blank" aria-label="WhatsApp">
+      <svg viewBox="0 0 32 32"><path d="M16 2.004c-7.732 0-14 6.268-14 14 0 2.472.651 4.857 1.891 6.962L2 30l7.17-1.874a13.933 13.933 0 006.83 1.77c7.732 0 14-6.268 14-14s-6.268-14-14-14zm0 25.902a11.933 11.933 0 01-6.11-1.648l-.438-.257-4.529 1.184 1.206-4.415-.287-.456A11.928 11.928 0 114 16.004c0 2.646.878 5.093 2.537 7.13l.36.444-.748 2.736 2.782-.727.426.249A11.932 11.932 0 0116 27.906zM11.04 9.89c-.284-.633-.585-.646-.857-.656l-.73-.01c-.25 0-.653.093-.996.464s-1.308 1.28-1.308 3.123c0 1.843 1.337 3.623 1.522 3.872.186.249 2.635 4.042 6.497 5.513 3.228 1.267 3.888 1.015 4.588.952.7-.063 2.263-.923 2.583-1.814.32-.891.32-1.654.223-1.814-.098-.159-.36-.255-.75-.446-.39-.19-2.263-1.116-2.615-1.245-.351-.129-.606-.19-.862.19-.255.38-.99 1.244-1.215 1.498-.224.253-.448.285-.838.095-.39-.19-1.647-.607-3.139-1.94-1.159-1.033-1.941-2.313-2.167-2.703-.224-.39-.024-.6.166-.79.17-.17.38-.448.57-.673.19-.224.253-.38.38-.633.127-.254.064-.48-.032-.672-.095-.191-.838-2.084-1.18-2.833z"/></svg>
+    </a>
 
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/focusgrajau" class="floating-button instagram" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.3 1 .7 1.5 1.2.5.5.9.9 1.2 1.5.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.3.6-.7 1-1.2 1.5-.5.5-.9.9-1.5 1.2-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.3-1-.7-1.5-1.2-.5-.5-.9-.9-1.2-1.5-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.3-.6.7-1 1.2-1.5.5-.5.9-.9 1.5-1.2.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zM12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm6.4-1.2a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+    </a>
+  </div>
 
 </body>
 </html>
+
