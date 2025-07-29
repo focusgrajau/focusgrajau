@@ -9,17 +9,48 @@
       background-color: #1A1F50;
       color: white;
       padding: 20px;
-      text-align: center;
+      display: flex;
     }
-    h1 {
+    .sidebar {
+      width: 250px;
+      background-color: #16214A;
+      padding: 20px;
+      border-radius: 10px;
+      margin-right: 20px;
+      height: fit-content;
+    }
+    .sidebar a {
       color: #F9C041;
+      display: block;
+      margin: 10px 0;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .main {
+      flex: 1;
+    }
+    h1, h2, h3 {
+      color: #F9C041;
+    }
+    .highlight {
+      background-color: #D9534F;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      color: white;
+    }
+    .section {
+      background-color: #22356C;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
     form {
       background-color: #22356C;
       padding: 20px;
       border-radius: 10px;
       max-width: 400px;
-      margin: 0 auto;
+      margin: 0 auto 30px auto;
     }
     input {
       width: 100%;
@@ -40,72 +71,108 @@
     }
     .content {
       display: none;
-      margin-top: 30px;
     }
     a {
       color: #F9C041;
-      display: block;
-      margin: 10px 0;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>Área do Aluno</h1>
+  <div class="main">
+    <h1>Área do Aluno</h1>
+    <form onsubmit="return validarAcesso(event)">
+      <input id="nome" placeholder="Nome completo" required type="text" />
+      <input id="matricula" placeholder="Matrícula" required type="text" />
+      <button type="submit">Entrar</button>
+    </form>
 
-  <form onsubmit="return validarAcesso(event)">
-    <input id="nome" placeholder="Nome completo" required type="text" />
-    <input id="matricula" placeholder="Matrícula" required type="text" />
-    <button type="submit">Entrar</button>
-  </form>
+    <div class="content" id="conteudo-enfermagem">
+      <h2>Bem-vindo(a), aluno(a) de Técnico em Enfermagem!</h2>
 
-  <!-- Conteúdo Enfermagem -->
-  <div class="content" id="conteudo-enfermagem">
-    <h2>Bem-vindo(a), aluno(a) de Técnico em Enfermagem!</h2>
-    <a href="https://drive.google.com/drive/folders/1CjhKodlRWq5VRwS-owFlhXF-TtQai0nX?usp=sharing" target="_blank">📂 Acessar Material da Turma</a>
+      <div class="section">
+        <a href="https://drive.google.com/drive/folders/1CjhKodlRWq5VRwS-owFlhXF-TtQai0nX?usp=sharing" target="_blank">📂 Acessar Material da Turma</a>
+      </div>
 
-    <h3>📢 Últimos Avisos</h3>
-    <ul>
-      <li>Data de pagamento do jaleco: 31 de agosto</li>
-      <li>Pagamento do fotógrafo: 30 de setembro</li>
-      <li>Prestação de conta da rifa: 04 de outubro</li>
-      <li>Data da cerimônia do jaleco: 25 de outubro</li>
-    </ul>
+      <div class="section">
+        <h3>🔔 Notificações em Destaque</h3>
+        <div class="highlight">🧥 Pagamento do jaleco até 31 de agosto</div>
+        <div class="highlight">📸 Pagamento do fotógrafo até 30 de setembro</div>
+        <div class="highlight">🎟️ Prestação de conta da rifa até 04 de outubro</div>
+        <div class="highlight">🎓 Cerimônia do jaleco: 25 de outubro</div>
+      </div>
 
-    <h3>🗓️ Calendário de Aulas</h3>
-    <ul>
-      <li>Agosto: dias 09, 23</li>
-      <li>Setembro: dias 06, 20</li>
-      <li>Outubro: dias 04, 18</li>
-      <li>Novembro: dias 08, 22</li>
-      <li>Dezembro: dias 06, 13</li>
-    </ul>
+      <div class="section">
+        <h3>🗓️ Calendário de Aulas</h3>
+        <ul>
+          <li>Agosto: dias 09, 23</li>
+          <li>Setembro: dias 06, 20</li>
+          <li>Outubro: dias 04, 18</li>
+          <li>Novembro: dias 08, 22</li>
+          <li>Dezembro: dias 06, 13</li>
+        </ul>
+      </div>
 
-    <h3>📞 Contato da Coordenação</h3>
-    <p>Whatsapp: <a href="https://wa.me/5599984450240">(99) 98445-0240</a></p>
+      <div class="section">
+        <h3>📘 Área Acadêmica</h3>
+        <ul>
+          <li><a href="#">📚 Grade curricular</a></li>
+          <li><a href="#">📈 Boletim ou notas parciais</a></li>
+          <li><a href="#">📄 Documentos úteis</a></li>
+          <li><a href="#">📥 Downloads</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>📍 Local das Aulas</h3>
+        <p><a href="https://share.google/GCG6bQpJxjYBWbQsa" target="_blank">Abrir no Google Maps</a></p>
+      </div>
+
+      <div class="section">
+        <h3>▶️ YouTube/Vídeos</h3>
+        <p><a href="#">Aulas extras e dicas de estudo</a></p>
+      </div>
+
+      <div class="section">
+        <h3>📞 Contato da Coordenação</h3>
+        <p>Whatsapp: <a href="https://wa.me/5599984450240">(99) 98445-0240</a></p>
+      </div>
+    </div>
+
+    <div class="content" id="conteudo-farmacia">
+      <h2>Bem-vindo(a), aluno(a) de Técnico em Farmácia!</h2>
+      <div class="section">
+        <a href="https://drive.google.com/drive/folders/1jkWKCR-DEhdk3YCrnepBJbnHRi73eIrJ?usp=sharing" target="_blank">📂 Acessar Material da Turma</a>
+      </div>
+      <div class="section">
+        <h3>🗓️ Calendário de Aulas</h3>
+        <ul>
+          <li>Agosto: dias 09, 23</li>
+          <li>Setembro: dias 06, 20</li>
+          <li>Outubro: dias 04, 18</li>
+          <li>Novembro: dias 08, 22</li>
+          <li>Dezembro: dias 06, 13</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h3>📞 Contato da Coordenação</h3>
+        <p>Whatsapp: <a href="https://wa.me/5599984450240">(99) 98445-0240</a></p>
+      </div>
+    </div>
   </div>
 
-  <!-- Conteúdo Farmácia -->
-  <div class="content" id="conteudo-farmacia">
-    <h2>Bem-vindo(a), aluno(a) de Técnico em Farmácia!</h2>
-    <a href="https://drive.google.com/drive/folders/1jkWKCR-DEhdk3YCrnepBJbnHRi73eIrJ?usp=sharing" target="_blank">📂 Acessar Material da Turma</a>
-
-    <h3>🗓️ Calendário de Aulas</h3>
-    <ul>
-      <li>Agosto: dias 09, 23</li>
-      <li>Setembro: dias 06, 20</li>
-      <li>Outubro: dias 04, 18</li>
-      <li>Novembro: dias 08, 22</li>
-      <li>Dezembro: dias 06, 13</li>
-    </ul>
-
-    <h3>📞 Contato da Coordenação</h3>
-    <p>Whatsapp: <a href="https://wa.me/5599984450240">(99) 98445-0240</a></p>
+  <div class="sidebar">
+    <h3>🧩 Menu Rápido</h3>
+    <a href="#conteudo-enfermagem">Enfermagem</a>
+    <a href="#conteudo-farmacia">Farmácia</a>
+    <a href="#">Material</a>
+    <a href="#">Notificações</a>
+    <a href="#">Aulas</a>
+    <a href="#">Contato</a>
   </div>
 
   <script>
     const alunos = {
-      // Enfermagem
       "ENF-F-2024-24001": "Aline Oliveira da Silva",
       "ENF-F-2024-24002": "Ana Paula Silva Costa",
       "ENF-F-2024-24003": "Carlos Souza Martins",
@@ -127,8 +194,6 @@
       "ENF-F-2024-24025": "Valderlanes Sobral da Silva",
       "ENF-F-2024-24026": "Vitória Oliveira Ferreira",
       "ENF-F-2024-24027": "Wannessa Oliveira Ferreira",
-
-      // Farmácia
       "FAR-M-2025-24001": "Gleciane Souza",
       "FAR-M-2025-24002": "Beatriz Rodrigues"
     };
